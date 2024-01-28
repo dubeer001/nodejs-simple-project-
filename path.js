@@ -1,5 +1,5 @@
 const path = require('node:path')
-
+function simple(){
 const a = path.basename('C:\\temp\\myfile.html');
 console.log(a);
 const b = path.dirname('C:\\temp\\myfile.html');
@@ -14,3 +14,5 @@ const e = path.format({
     base: 'file.txt',
   });
   console.log(e);
+}
+module.exports= simple;
