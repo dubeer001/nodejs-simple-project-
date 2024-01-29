@@ -1,14 +1,20 @@
-// const express = require('express') //using commen js
-import express from 'express'; //using Es module scoope
+ const express = require('express') //using commen js
+// import express from 'express'; //using Es module scoope
 const app = express()
 
+// import {myEmitter } from "./eventmodule.js";
 
-import { simple } from './moduleFirst.js';
-simple();
+const myEmitter = require('./eventmodule.js')
+console.log( myEmitter.listeners('waterfull'));
 
-// const herry = require("./second");
-import herry from './second.js'
-console.log(herry());
+
+// import { simple } from './moduleFirst.js'; // importing module first file
+const simple=require('./moduleFirst.js');
+// simple();
+
+const herry = require("./second");
+// import herry from './second.js'
+// console.log(herry());
 // const path = require('./path')
 // const osm = require('./osmodule')
 
@@ -20,6 +26,6 @@ app.get('/',(req,res)=>{
 })
 app.listen(3000,()=>{
 
-console.log('app is lisning on port http://localhost:3000')
+// console.log('app is lisning on port http://localhost:3000')
 })
 

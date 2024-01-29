@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Dubeer",
-  "type": "module",
+
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"

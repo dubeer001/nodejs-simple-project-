@@ -1,3 +1,4 @@
-export function simple (){
+ function simple (){
 console.log('simple')
 }
+module.exports = simple;
