@@ -1,6 +1,5 @@
 {
   "name": "nodejs",
-  
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +8,6 @@
   },
   "keywords": [],
   "author": "Dubeer",
-
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
