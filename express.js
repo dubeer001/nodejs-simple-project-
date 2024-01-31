@@ -1,4 +1,4 @@
-const {  error } = require('console');
+const {  Error } = require('console');
 const express = require('express');
 const fs = require('fs');
 const app = express();
@@ -13,21 +13,17 @@ app.get('/', (req, res) => {
             res.send(data);
         }
     });
+    app.get('/about', (req, res) => {
+        res.end('<h1>THIS IS /about url  </h1>  <P>  HELLO WORLD WEB <P/>')
+    })
+
+    app.get('/hello', (req, res) => {
+        res.end('<h1>THIS IS /hello url  </h1>  <P>  HELLO WORLD WEB <P/>')
+    })
+    
+
+
 });
-
-app.get('/about', (req, res) => {
-    fs.readFile('about.html', (err, data) => {
-        console.log(req)
-        if (err) {
-            console.error('Error reading about.html:', err);
-            res.status(500).send('Internal Server Error on about ');
-        } else {
-            res.send(data);
-        }
-    });
-});
-
-
 
 app.listen(port, () => {
     console.log(`app is listening on port: http://localhost:${port}`);
